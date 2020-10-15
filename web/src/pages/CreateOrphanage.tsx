@@ -8,6 +8,7 @@ import { FiArrowLeft, FiPlus } from "react-icons/fi";
 import mapMarkerImg from '../assets/map-market.svg';
 
 import '../styles/pages/create-orphanage.css';
+import SideBar from "../components/SideBar";
 
 const happyMapIcon = L.icon({
   iconUrl: mapMarkerImg,
@@ -18,20 +19,9 @@ const happyMapIcon = L.icon({
 })
 
 export default function CreateOrphanage() {
-  const { goBack } = useHistory();
-
   return (
     <div id="page-create-orphanage">
-      <p>works</p>
-      <aside>
-        <img src={mapMarkerImg} alt="Happy" />
-
-        <footer>
-          <button type="button" onClick={goBack}>
-            <FiArrowLeft size={24} color="#FFF" />
-          </button>
-        </footer>
-      </aside>
+      <SideBar />
 
       <main>
         <form className="create-orphanage-form">
